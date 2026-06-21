@@ -581,6 +581,99 @@
             color: var(--soft-brown);
         }
         
+        /* Meet the Baker Section */
+        .baker {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, var(--warm-white) 0%, var(--blush) 100%);
+            overflow: hidden;
+        }
+        
+        .baker-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4.5rem;
+            align-items: center;
+        }
+        
+        .baker-photo-wrap {
+            position: relative;
+        }
+        
+        .baker-photo {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 30px 70px rgba(92, 64, 51, 0.22);
+            transition: transform 0.6s var(--ease-out-expo);
+        }
+        
+        .baker-photo-wrap:hover .baker-photo {
+            transform: translateY(-6px);
+        }
+        
+        .baker-photo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -1.25rem -1.25rem auto auto;
+            width: 130px;
+            height: 130px;
+            background: var(--rose);
+            border-radius: 50%;
+            opacity: 0.35;
+            z-index: -1;
+        }
+        
+        .baker-photo-badge {
+            position: absolute;
+            bottom: -1.25rem;
+            left: -1.25rem;
+            background: var(--cream);
+            padding: 0.85rem 1.4rem;
+            border-radius: 100px;
+            box-shadow: 0 15px 35px rgba(92, 64, 51, 0.18);
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            color: var(--deep-brown);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .baker-text .section-title {
+            margin-bottom: 1.5rem;
+        }
+        
+        .baker-bio {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--soft-brown);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .baker-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        
+        .baker-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--warm-white);
+            border: 1.5px solid var(--rose);
+            color: var(--deep-brown);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
         /* Creations/Gallery Section */
         .creations {
             padding: 8rem 2rem;
@@ -1055,6 +1148,16 @@
                 gap: 4rem;
             }
             
+            .baker-container {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+                max-width: 520px;
+            }
+            
+            .baker-photo-wrap {
+                order: -1;
+            }
+            
             .about-images {
                 height: 450px;
                 max-width: 500px;
@@ -1149,6 +1252,7 @@
             }
             
             .about,
+            .baker,
             .creations,
             .services,
             .cta {
@@ -1223,6 +1327,7 @@
         <a href="#" class="nav-logo">ArtsyTartsy</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#baker">The Baker</a></li>
             <li><a href="#creations">Creations</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact" class="nav-cta">Order Now</a></li>
@@ -1302,6 +1407,27 @@
                             <p>Passion in every detail</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Baker Section -->
+    <section class="baker" id="baker">
+        <div class="baker-container">
+            <div class="baker-photo-wrap reveal">
+                <img src="images/baker.jpg" alt="The baker behind ArtsyTartsy holding a caramel drip cake" class="baker-photo" loading="lazy">
+                <div class="baker-photo-badge">🎂 The Baker</div>
+            </div>
+            <div class="baker-text">
+                <span class="section-tag reveal">Meet the Baker</span>
+                <h2 class="section-title reveal reveal-delay-1">The Heart Behind <span>Every Cake</span></h2>
+                <p class="baker-bio reveal reveal-delay-2">Born and raised in Mysore and now based in Bangalore, she turned a lifelong love of art and cooking into ArtsyTartsy. Baking is where all of her passions meet, and every cake becomes a small canvas to design and play with.</p>
+                <p class="baker-bio reveal reveal-delay-2">When you order from ArtsyTartsy, your cake is made by her, start to finish. No team, no shortcuts, just one person who treats your celebration like her own.</p>
+                <div class="baker-chips reveal reveal-delay-3">
+                    <span class="baker-chip">📍 From Mysore</span>
+                    <span class="baker-chip">🏠 Based in Bangalore</span>
+                    <span class="baker-chip">🎨 Art, Cooking &amp; Baking</span>
                 </div>
             </div>
         </div>
